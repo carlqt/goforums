@@ -1,0 +1,251 @@
+/*  phpBB 3.0 Style Sheet
+    --------------------------------------------------------------
+	Style name:		Pinkie
+	Based on style:	proSilver (the default phpBB 3.0.x style)
+	Original author:	subBlue ( http://www.subBlue.com/ )
+	Modified by:		Abdul Turan ( http://www.abdul91.de/ )	
+    --------------------------------------------------------------
+*/
+
+/* General Markup Styles
+---------------------------------------- */
+
+* {
+	/* Reset browsers default margin, padding and font sizes */
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+	font-size: 100%;
+	/* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
+	height: 100%;
+}
+
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	color: #828282;
+	background-color: #FFFFFF;
+	/*font-size: 62.5%;			 This sets the default font size to be equivalent to 10px */
+	font-size: 10px;
+	margin: 0;
+	padding: 12px 0;
+}
+
+.container {
+	width: 949px;
+	height: auto;
+	min-height: 600px;
+	border-style: solid;
+	border-color: pink;
+	background-color: #FFFFFF;
+	margin-left: 15%;
+	padding: 10px;
+  	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.header {
+	width: 938px;
+	height: 152px;
+	background-color: #ffa7b6;
+	margin-left: 7px;
+	/*background-image:url('logo.png');*/
+	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#logo
+{
+  display: block;
+  width: 96px;
+  height: 25px;
+  background: url("button_topic_new.gif") no-repeat 0 0;
+  background-size: 96px 50px;
+
+}
+
+#logo:hover
+{ 
+  background-position: 0 -25px;
+}
+
+#logo span
+{
+  position: absolute;
+  top: -999em;
+}
+
+
+.announcement {
+	width: 938px;
+	height: 71px;
+	background-color: #ffa7b6;
+	margin-left: 7px;
+	margin-top: 150px;
+	padding-top: 10px;
+	/*background-image:url('logo.png');*/
+	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.threadcell {
+	width: 928px;
+	height: 39px;
+	background-color: #DDEDFB;
+	margin-left: 4px;
+	margin-top: 5px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	
+}
+
+.threadcell:hover {
+	background-color: #FDD5DB;
+
+}
+
+#anntitle {
+	padding-left: 12px;
+	width: 475px;
+	margin-top: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align:left;
+	font-family:"Arial", Times, serif;
+}
+
+#annreplies{
+	width: 80px;
+	margin-left: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	font-family:"Arial", Times, serif;
+}
+
+#annviews{
+	width: 80px;
+	margin-top: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	font-family:"Arial", Times, serif;
+}
+
+#annlastpost{
+	width: 255px;
+	padding-left: 12px;
+	margin-top: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: left;
+	font-family:"Arial", Times, serif;
+}
+
+#title {
+	padding-left: 12px;
+	width: 475px;
+	margin-top: 5px;
+	color: #865DA0;
+	font-weight: bold;
+	text-align:left;
+	font-family:"Arial", Times, serif;
+	
+}
+
+#replies{
+
+	font-weight: bold;
+	text-align: center;
+	font-family:"Arial", Times, serif;
+}
+
+#views{
+
+	font-weight: bold;
+	text-align: center;
+	font-family:"Arial", Times, serif;
+}
+
+#lastpost{
+	padding-left: 12px;
+	font-weight: bold;
+	text-align: left;
+	font-family:"Arial", Times, serif;
+}
+
+.tblthreads_header {
+	margin-left: 5px;
+}
+
+.threads {
+	width: 938px;
+	height: auto;
+	min-height: 71px;
+	background-color: #ffa7b6;
+	margin-left: 7px;
+	margin-top: 5px;
+	padding-top: 10px;
+	/*background-image:url('logo.png');*/
+	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.signin_nav {
+	width: 938px;
+	height: 31px;
+	background-color: #DDEDFB;
+	margin-left: 7px;
+	margin-top: 5px;
+	/*background-image:url('logo.png');*/
+	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.signup_container {
+	width: 938px;
+	height: 310px;
+	background-color: #DDEDFB;
+	margin-left: 7px;
+	margin-top: 5px;
+	/*background-image:url('logo.png');*/
+	
+  	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.navheader {
+	padding-top: 5px;
+	text-align: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+/* link styles */
+
+a:link {
+	color: #FD8191;
+}
+
+a:hover {
+	color: #D31141;
+}
+
+
+html, body { background-color: #E5E5E5; } /* Hintergrundfarbe - Aussen */
