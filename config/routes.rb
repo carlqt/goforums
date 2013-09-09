@@ -1,9 +1,17 @@
 Goforums::Application.routes.draw do
   
+  get "topics/new"
+  get "post/new"
   get "forums/home"
   
   root 'forums#home'
   devise_for :users
+  get "posts/new/(:id)" => "posts#new", :as => 'new_post'
+  resources :topics
+  resources :posts, :only => [:create]
+
+  
+  get "topics(/:title)" => "topics#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

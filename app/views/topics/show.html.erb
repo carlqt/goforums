@@ -1,0 +1,23 @@
+<%= link_to "<span>Post a reply</span>".html_safe, new_post_path(params[:id]), :id => "logo_reply", title: "Post a reply", :width => 96 %>
+
+<% @posts.each do |post|%>
+	<div class = "post_container">
+		
+			<div class = "vertical">
+				<%= @user.username %>
+			</div>
+		<div class = "post_content">
+			Reply on: <%= post.created_at%><br /><br />
+			
+			<p>
+				<%= post.posts %>
+			</p>
+				
+		
+		</div>
+		
+	</div>
+
+<% end %>
+
+<%= link_to "<span>Post a reply</span>".html_safe, new_post_path(params[:id]), :id => "logo_reply", title: "Post a reply", :width => 96 %>

@@ -1,0 +1,26 @@
+<div class="signup_container">
+	<div class = "signup_contents">
+
+		<%= form_for @topics do |topic|%>
+			
+			<%= topic.label :title%><br />
+			<%= topic.text_field :title, :autofocus => true %><br /><br/>
+			<%= topic.hidden_field :user_id, :value => current_user.id %><br />
+			
+			
+			
+				<%= topic.fields_for :posts do |builder| %>
+					<%= builder.label :posts %><br />
+					<%= builder.text_area :posts %><br /><br/>
+					<%= builder.hidden_field :user_id, :value => current_user.id %><br />
+				<% end %>
+				
+			<%= submit_tag "Post" %>
+		<% end %>
+			
+	</div>
+</div>
+
+
+
+					<%#= post_form.hidden_field :user_id, :value => current_user.id %><br /><br/>

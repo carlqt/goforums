@@ -1,45 +1,56 @@
-<div class="announcement">
 
+<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %>
+
+<% @topics.each do |topic| %>
+	<% if topic.title == "Announcement"%>
+		<div class="announcement">
 		
-		<table class="tblthreads_header">
-			<tr>
-				<td id="anntitle">ANNOUNCEMENT</td>
-				<td id="annreplies">REPLIES</td>
-				<td id="annviews">VIEWS</td>
-				<td id="annlastpost">LASTPOST</td>
-			</tr>
-			<tr class = "threadcell">
-				<td id="title">ANNOUNCEMENT <br> by meooio</td>
-				<td id="replies">REPLIES</td>
-				<td id="views">VIEWS</td>
-				<td id="lastpost">LASTPOST</td>
-			</tr>			
-		</table>
-		
+				
+				<table class="tblthreads_header">
+					<tr>
+						<td id="anntitle">ANNOUNCEMENT</td>
+						<td id="annreplies">REPLIES</td>
+						<td id="annviews">VIEWS</td>
+						<td id="annlastpost">LASTPOST</td>
+					</tr>
+					<tr class = "threadcell">
+						<td id="title"><%= topic.title %> <br> by <%= topic.user_id %></td>
+						<td id="replies">REPLIES</td>
+						<td id="views">VIEWS</td>
+						<td id="lastpost">LASTPOST</td>
+					</tr>			
+				</table>
+				
+		</div>
+	<% end %>
 
-
-</div>
+<% end %>
 
 <div class="threads">
 
 		
 		<table class="tblthreads_header">
 			<tr>
-				<td id="anntitle">ANNOUNCEMENT</td>
+				<td id="anntitle">TITLE</td>
 				<td id="annreplies">REPLIES</td>
 				<td id="annviews">VIEWS</td>
 				<td id="annlastpost">LASTPOST</td>
 			</tr>
-			<tr class = "threadcell">
-				<td id="title">Carl <br> by meooio</td>
-				<td id="replies">0</td>
-				<td id="views">0</td>
-				<td id="lastpost">LASTPOST</td>
-			</tr>
 			
+			<% @topics.each do |topic| %>
+				<% if topic.title != 'Announcement' %>
+					<tr class = "threadcell">
+						<td id="title"><%= link_to topic.title, topic_path(topic) %><br> by <%= topic.user.username %></td>
+						<td id="replies">0</td>
+						<td id="views">0</td>
+						<td id="lastpost">LASTPOST at <%= topic.created_at%></td>
+					</tr>
+				<% end %>
+			<% end %>
 		</table>
 		
 
 
 </div>
 
+<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %>
