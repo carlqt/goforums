@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_filter :authenticate_user!, :except => :show
+  
   def show
     @topics = Topic.find(params[:id])
     @posts = @topics.posts.page(params[:page]).per(10)

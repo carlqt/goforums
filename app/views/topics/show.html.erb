@@ -7,7 +7,7 @@
 				<%= username(post.user_id) %>
 			</div>
 		<div class = "post_content">
-			Reply on: <%= post.created_at%><br /><br />
+			Reply on: <%= post.created_at.strftime("%d %B %Y, %H:%M")%><br /><br />
 			
 			<p>
 				<%= post.posts %>
