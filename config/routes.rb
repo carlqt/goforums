@@ -11,7 +11,7 @@ Goforums::Application.routes.draw do
   resources :posts, :only => [:create]
 
   
-  get "topics(/:title)" => "topics#show"
+  get "topics(/:id(/:page))" => "topics#show", :as => 'topics_page'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

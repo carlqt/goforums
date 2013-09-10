@@ -61,17 +61,31 @@ body {
 	border-radius: 10px;
 }
 
+/* paginate styles */
+
+.paginate_top {
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.paginate_bot {
+	float: right;
+	margin-right: 10px;
+}
+
 /* rollover icons */
+
 
 #logo_new_topic
 {
-  display: block;
+	
+  display:inline-block;
   width: 96px;
   height: 25px;
   margin-left: 10px;
   padding: 1px;
   margin-top: 5px;
-  margin-bottom: 5px;
   background: url("button_topic_new.gif") no-repeat 0 0;
   background-size: 96px 50px;
 
@@ -91,7 +105,7 @@ body {
 
 #logo_reply
 {
-  display: block;
+  display:inline-block;
   width: 96px;
   height: 25px;
   margin-left: 10px;
@@ -147,6 +161,14 @@ body {
 .threadcell:hover {
 	background-color: #FDD5DB;
 
+}
+
+.threadcell a:visited {
+	color: #FD8191;
+}
+
+.threadcell a {
+	text-decoration: none;
 }
 
 #anntitle {

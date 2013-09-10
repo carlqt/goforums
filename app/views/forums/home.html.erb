@@ -1,7 +1,6 @@
 
-<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %>
-
-<% @topics.each do |topic| %>
+<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %><div class="paginate_top"><%= paginate @topics %></div>
+<% @topics_anouncement.each do |topic| %>
 	<% if topic.title == "Announcement"%>
 		<div class="announcement">
 		
@@ -14,8 +13,8 @@
 						<td id="annlastpost">LASTPOST</td>
 					</tr>
 					<tr class = "threadcell">
-						<td id="title"><%= topic.title %> <br> by <%= topic.user_id %></td>
-						<td id="replies">REPLIES</td>
+						<td id="title"><%= link_to topic.title, topic_path(topic) %><br> by <%= topic.user.username %></td>
+						<td id="replies"><%= topic.posts.count%></td>
 						<td id="views">VIEWS</td>
 						<td id="lastpost">LASTPOST</td>
 					</tr>			
@@ -25,6 +24,9 @@
 	<% end %>
 
 <% end %>
+
+
+
 
 <div class="threads">
 
@@ -41,7 +43,7 @@
 				<% if topic.title != 'Announcement' %>
 					<tr class = "threadcell">
 						<td id="title"><%= link_to topic.title, topic_path(topic) %><br> by <%= topic.user.username %></td>
-						<td id="replies">0</td>
+						<td id="replies"><%= topic.posts.count%></td>
 						<td id="views">0</td>
 						<td id="lastpost">LASTPOST at <%= topic.created_at%></td>
 					</tr>
@@ -50,7 +52,6 @@
 		</table>
 		
 
-
 </div>
 
-<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %>
+<%= link_to "<span>Post new topic</span>".html_safe, topics_new_path, :id => "logo_new_topic", title: "Post New Topic", :width => 96 %><div class="paginate_bot"><%= paginate @topics %></div>

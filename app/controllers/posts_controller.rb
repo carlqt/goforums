@@ -8,7 +8,9 @@ class PostsController < ApplicationController
     @posts = Post.new(posts_params)
     
     if @posts.save
-      redirect_to topic_path(@posts)
+      @topic = Topic.find(@posts.topic_id)
+      @post_page = @topic.posts.page(params[:page]).per(10).num_pages
+      redirect_to topics_page_path(@posts.topic_id, params[:page] = @post_page)
     else
       render 'new'
     end
