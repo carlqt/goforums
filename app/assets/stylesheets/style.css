@@ -391,6 +391,11 @@ a:hover {
   margin-left: 25px;
 }
 
-
+#pinkachu {
+	float: right;
+	padding: 1px;
+	margin-top: 35px;
+	margin-right: 5px;
+}
 
 html, body { background-color: #E5E5E5; } /* Hintergrundfarbe - Aussen */

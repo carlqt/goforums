@@ -10,6 +10,8 @@ gem "devise", "~> 3.0.3"
 gem 'annotate', '2.5.0'
 # Use sqlite3 as the database for Active Record
 
+gem 'paperclip'
+
 group :development, :test do
   gem 'sqlite3'
 end

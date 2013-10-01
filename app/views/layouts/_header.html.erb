@@ -2,15 +2,20 @@
 	
 		<%= link_to (image_tag "logo.png", :id=>"logo1"), root_path %>
 		
+		<%= image_tag "pinkachu.png", :size => "100x100", :class => "animated bounce", :id => "pinkachu" %>
+		
 </div>
 
 <div class = "signin_nav">
 	<nav class = "navheader">
-		<%= image_tag "icon_register.gif" %><%= link_to "Register", new_user_registration_path%>
+		
 		
 		<% if user_signed_in? %>
+			<%= image_tag "icon_ucp.gif" %><%= link_to "Avatar",  '#'%>
 			<%= image_tag "icon_logout.gif" %><%= link_to "Logout",  destroy_user_session_path, :method => :delete %>
+			
 		<% else %>
+			<%= image_tag "icon_register.gif" %><%= link_to "Register", new_user_registration_path%>
 			<%= image_tag "icon_logout.gif" %><%= link_to "Login",  new_user_session_path %>
 		<% end %>
 	</nav>

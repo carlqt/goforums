@@ -15,7 +15,7 @@
 					<tr class = "threadcell">
 						<td id="title"><%= link_to topic.title, topic_path(topic) %><br> by <%= topic.user.username %></td>
 						<td id="replies"><%= topic.posts.count%></td>
-						<td id="views">VIEWS</td>
+						<td id="views">N/A</td>
 						<td id="lastpost"><%= lastpost_timestamp(topic.id).strftime("%d %B %Y, %H:%M") %></td>
 					</tr>			
 				</table>
@@ -44,7 +44,7 @@
 					<tr class = "threadcell">
 						<td id="title"><%= link_to topic.title, topic_path(topic) %><br> by <%= topic.user.username %></td>
 						<td id="replies"><%= topic.posts.count%></td>
-						<td id="views">0</td>
+						<td id="views">N/A</td>
 						<td id="lastpost">LASTPOST at <%= lastpost_timestamp(topic.id).strftime("%d %B %Y, %H:%M") %></td>
 					</tr>
 				<% end %>

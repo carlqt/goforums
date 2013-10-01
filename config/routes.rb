@@ -3,7 +3,7 @@ Goforums::Application.routes.draw do
   get "topics/new"
   get "post/new"
   get "forums/home"
-  
+  get "blank" => "forums#blank"
   root 'forums#home'
   devise_for :users
   get "posts/new/(:id)" => "posts#new", :as => 'new_post'

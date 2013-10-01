@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$( document ).ready(function() {
+ 
+	$('.pics').cycle({ 
+	    fx:     'shuffle', 
+	    speed: 1000
+	});
+ 
+});
+
+function KeyPress(e) {
+      var evtobj = window.event? event : e
+      if (evtobj.keyCode == 90 && evtobj.ctrlKey) alert("Ctrl+z");
+}
+
+document.onkeydown = KeyPress;
+
+$(function() {
+   $('#flash').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+   });
+});

@@ -7,4 +7,8 @@ class ForumsController < ApplicationController
     #@page_topics =  Topic.page(1).per(5)
     
   end
+  
+  def blank
+    
+  end
 end
