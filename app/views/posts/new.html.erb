@@ -4,7 +4,7 @@
 		<%= form_for @posts do |post|%>
 			
 			<%= post.label :posts %><br />
-			<%= post.text_area :posts, :autofocus => true, :size => "50x10" %><br /><br/>
+			<%= post.text_area :posts, :autofocus => true, :size => "50x10", :class => 'tinymce' %><br /><br/>
 			<%= post.hidden_field :user_id, :value => current_user.id %>
 			<%= post.hidden_field :topic_id, :value => params[:id] %>
 			<%= submit_tag "Post" %>
@@ -12,5 +12,7 @@
 			
 	</div>
 </div>
+
+<%= tinymce :alternate %>
 
 					<%#= post_form.hidden_field :user_id, :value => current_user.id %><br /><br/>

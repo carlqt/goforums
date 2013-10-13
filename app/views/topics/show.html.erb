@@ -10,7 +10,7 @@
 			Reply on: <%= post.created_at.strftime("%d %B %Y, %H:%M")%><br /><br />
 			
 			<p>
-				<%= post.posts %>
+				<%= post.posts.html_safe %>
 			</p>
 				
 		
