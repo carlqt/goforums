@@ -25,3 +25,5 @@ class PostsController < ApplicationController
       
     end
 end
+
+help me im in love
