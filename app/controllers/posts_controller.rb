@@ -27,3 +27,4 @@ class PostsController < ApplicationController
 end
 
 help me im in love
+got rejectssed
